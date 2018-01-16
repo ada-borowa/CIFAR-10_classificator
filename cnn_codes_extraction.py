@@ -66,17 +66,17 @@ def visualize_cnn_codes(X, labels):
 
 if __name__ == '__main__':
     # load data and setup tf graph
-    # all_data = load_data()
-    # setup_graph(INCEPTION_GRAPH)
-    #
-    # # extract codes from pool3 layer and pickle them
-    # train_cnn_codes, train_labels = extract_cnn_codes(all_data['train'])
-    # pickle.dump(train_cnn_codes, open(DATA_PATH + 'train_cnn_codes', 'wb'))
-    # pickle.dump(train_labels, open(DATA_PATH + 'train_labels', 'wb'))
-    #
-    # test_cnn_codes, test_labels = extract_cnn_codes(all_data['test'])
-    # pickle.dump(test_cnn_codes, open(DATA_PATH + 'test_cnn_codes', 'wb'))
-    # pickle.dump(test_labels, open(DATA_PATH + 'test_labels', 'wb'))
+    all_data = load_data()
+    setup_graph(INCEPTION_GRAPH)
+
+    # extract codes from pool3 layer and pickle them
+    train_cnn_codes, train_labels = extract_cnn_codes(all_data['train'])
+    pickle.dump(train_cnn_codes, open(DATA_PATH + 'train_cnn_codes', 'wb'))
+    pickle.dump(train_labels, open(DATA_PATH + 'train_labels', 'wb'))
+
+    test_cnn_codes, test_labels = extract_cnn_codes(all_data['test'])
+    pickle.dump(test_cnn_codes, open(DATA_PATH + 'test_cnn_codes', 'wb'))
+    pickle.dump(test_labels, open(DATA_PATH + 'test_labels', 'wb'))
 
     # load codes from pickles
     train_codes = pickle.load(open(DATA_PATH + 'train_cnn_codes', 'rb'))

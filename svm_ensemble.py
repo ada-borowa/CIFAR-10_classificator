@@ -1,3 +1,6 @@
+"""
+Trying to improve SVM score by using bagging.
+"""
 import pickle
 import numpy as np
 import time

@@ -1,5 +1,5 @@
 """
-Training SVM classifier on data processed with PCA.
+Training SVM classifier on data preprocessed with PCA.
 """
 import pickle
 import numpy as np

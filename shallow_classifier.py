@@ -1,3 +1,4 @@
+"""Training shallow classifier: Random Forest."""
 import numpy as np
 import tensorflow as tf
 from skimage.feature import hog
